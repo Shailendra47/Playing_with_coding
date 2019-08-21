@@ -1,4 +1,4 @@
-//INSERTION SORT
+//INSERTION SORT new
 #include<stdio.h>
 #include<conio.h>
 void INSERTION_SORT(int [],int);
