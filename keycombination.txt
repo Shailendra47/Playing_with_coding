@@ -1,0 +1,50 @@
+#.keyboard key combination 
+
+1. windows button :- open menu bar
+
+2. windows button + a :- open action centre
+
+3. windows button + b :- going to right side windows bar(to switch the icon using arrow keys) 
+
+4. windows button + ctrl + b :- to indicate a new message
+
+5. windows button + c :- to change a windows screen(works seperate windows)
+
+6. windows button + d :- minimize your all open windows immediatly
+
+7. windows button + e :- quick access to windows explorer
+
+8. windows button + f :- to find files and folder/In windows10 opens feedback window
+
+9. windows button + ctrl + f :- find computers 
+
+10. windows button + g :- In windows(xp,vista,7)opens all the gagets in window
+				/In windows10 it opens the game bar
+
+11. windows button + k :- new start menu
+
+12. windows button + l :- change the user and lock the workstation quickly
+
+13. windows button + m :- to minimize all windows
+
+14. windows button + shift(left) + m :- restore the last minimize window
+
+15. windows button + o :- (press together)lock device orientation/disable jyroscope function on tablet mode
+
+16. windows button + p :- for internal monitor/projector
+
+17. windows button + q :- for searching
+
+18. windows button + r :- open a run dialog bar
+
+19. windows button + t :- focus to the task bar
+
+20. windows button + u :- windows utility bar
+
+21. windows button + w :- opens windows work space
+
+22. windows button + x :- opens windows mobo application settings
+
+23. windows button + y :- it starts yahoo messenger
+
+24. windows button + printscreen :- take a screen shot 
