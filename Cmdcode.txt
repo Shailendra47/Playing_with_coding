@@ -1,0 +1,47 @@
+	In command prompt(how to change color)
+1.color 0a :- light green
+2.color 0b :- pink
+3.color 0b :- sky blue
+4.color 0c :- dark red
+ 
+#. tasklist :- to show your all system application or space
+
+#. cls :- clear screen
+
+#. systeminfo :- every information in pc & os (get every thing about your machine)
+
+#. tree :- graphical representation of every file(recently used)
+
+#. doskey /history :- used commands in CMD(rescently used)
+
+#. ping url :- (get any website ip address) 
+
+#. help :- get listing your all commands
+
+#. tree :- listing of all folders in a directory
+
+#. dir :-information about folder
+
+#. Tasklist :- get listing of all programming running
+
+#. driverquery :- get details of all drivers installed
+
+#. press f7 for history/press f11 for full screen
+
+#. cls :- clear screen
+
+// commands for hacking
+
+#. ping website :- to find the ip address
+
+#. nslookup website :- used to find networks to website
+
+#. tracert website :- tracing route website network
+
+#. arp -a :- show network table
+
+#. route print :- show network information
+
+#. ipconfig/all :- Show all network related to ip address
+
+#. netstat -an :- TCP/UDP network information	
