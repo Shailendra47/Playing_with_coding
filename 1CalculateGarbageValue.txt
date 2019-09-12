@@ -1,0 +1,26 @@
+Question: How to calculate Garbage value?
+
+
+Answer:we're taking integer range you can take different Datatype range to solve the garbage value.
+
+		Total number of inputs (suppose) 40,000
+											-32,767	
+									       ----------
+									          7,233
+									       ----------
+									             /
+									           	/
+									           /
+									          /
+									         /   
+									        \/
+									        ADD
+
+									       -32,768
+									        +7,233
+									      ---------
+									       -25,535
+									       		+1		(Again ADD 1)
+									      ---------
+	(Garbage Value) -------------->	       -25,536
+									      --------- 		  
