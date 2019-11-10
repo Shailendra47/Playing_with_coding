@@ -1,0 +1,75 @@
+|-----------------------------------------------------------------------------------------|
+|	 SQL ALIAS  																		  |
+|	 ---------																			  |
+|	-SQL aliases are used to give a table, or a column in a table, a temporary name.	  |
+|	-Aliases are often used to make column names more readable.							  |
+|	-An alias only exists for the duration of the query.								  |
+|-----------------------------------------------------------------------------------------|
+
+#  DATABASE: Alias(create database alias;)	#
+
+create table Customers (
+	customerID int(255) auto_increment not null primary key,
+	customerName varchar(255),
+	contactName varchar(255),
+	Address varchar(255),
+	city varchar(255),
+	postalCode int(250),
+	country varchar(255)
+);
+
+//	TABLE:	CUSTOMERS	//
+insert into Customers (customerID,customerName,contactName,Address,city,postalCode,country) values (1,'shailendra singh','singh','mukhani','haldwani',263139,'india');
+insert into Customers (customerID,customerName,contactName,Address,city,postalCode,country) values (2,'farhaan ali','ali','afaree','paltan bazaar',263138,'afganistan');
+insert into Customers (customerID,customerName,contactName,Address,city,postalCode,country) values (3,'kabita chiral','chiral','pirum daraa','ramnagar',263198,'india');
+insert into Customers (customerID,customerName,contactName,Address,city,postalCode,country) values (4,'vandana pant','pant','laldath','ranibag',263108,'india');
+insert into Customers (customerID,customerName,contactName,Address,city,postalCode,country) values (5,'vartika joshi','joshi','pilikhothi','amritpur',263191,'india');
+insert into Customers (customerID,customerName,contactName,Address,city,postalCode,country) values (6,'shailendra singh','kai','tokyo','shimasu town',10102,'japan');
+
+
+create table Orders (
+	orderID int(255),
+	customerID int(255),
+	employeeID int(255),
+	orderDate date,
+	shipperID int(255)
+);
+
+//	TABLE:	ORDERS	//
+insert into Orders (orderID,customerID,employeeID,orderDate,shipperID) values (10101,25,01,'2011-04-01',04);
+insert into Orders (orderID,customerID,employeeID,orderDate,shipperID) values (10102,84,02,'2011-01-24',03);
+insert into Orders (orderID,customerID,employeeID,orderDate,shipperID) values (10103,26,03,'2012-09-09',02);
+insert into Orders (orderID,customerID,employeeID,orderDate,shipperID) values (10104,99,04,'2013-06-10',01);
+insert into Orders (orderID,customerID,employeeID,orderDate,shipperID) values (10105,74,05,'2014-12-12',00);
+insert into Orders (orderID,customerID,employeeID,orderDate,shipperID) values (10105,6,06,'2015-11-13',5);
+
+
+@	QUERIES Alias	@
+|-------------------|
+
+*. Alias Column Syntax
+Eg:- SELECT column_name AS alias_name FROM table_name; 
+
+-> Alias for Column Example
+Eg:- SELECT CustomerID AS ID, CustomerName AS Customer FROM Customers;
+
+Eg:- SELECT CustomerName AS Customer, ContactName AS '[Contact Person]' FROM Customers;
+NOTE: It requires double quotation marks or square brackets if the alias name contains spaces.
+
+Eg:- SELECT CustomerName, CONCAT(Address,', ',PostalCode,', ',City,', ',Country) AS Address FROM 		 customers;
+
+*. Alias Table Syntax
+Eg:- SELECT column_name(s) FROM table_name AS alias_name;
+
+-> Alias for Table Example
+Eg:- SELECT orders.orderID, orders.orderDate, customers.customerName FROM customers, orders
+	 WHERE customers.customerName='shailendra singh' AND customers.customerID=orders.customerID;
+
+|-------------------------------------------------------|
+|	Aliases can be useful when							|
+|	--------------------------							|	
+|	-There are more than one table involved in a query	|
+|	-Functions are used in the query					|
+|	-Column names are big or not very readable			|
+|	-Two or more columns are combined together			|
+|-------------------------------------------------------|

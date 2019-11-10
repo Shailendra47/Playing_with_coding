@@ -1,0 +1,48 @@
+@ SQL INNER JOIN Keyword @
+|------------------------|
+	
+->The INNER JOIN keyword selects records that have matching values in both tables.
+
+=> INNER JOIN Syntax
+\-----------------/
+
+:- SELECT column_name(s) FROM table1 INNER JOIN table2	ON table1.column_name =       					table2.column_name;
+OrderID	CustomerID	EmployeeID	OrderDate	ShipperID
+# DATABASES: JOINS(create database joins;) #
+
+create table orders (
+	orderID int(255) primary key not null,
+	customerID int(255),
+	employeeId int(255),
+	orderDate date,
+	shipperId int(255)
+);
+
+//	 TABLE: ORDERS 	//
+insert into orders (orderID,customerID,employeeID,orderDate,shipperID) values (101,1661330077,3310,'2015-04-01',06);
+insert into orders (orderID,customerID,employeeID,orderDate,shipperID) values (102,1661330078,3320,'2014-08-24',07);
+insert into orders (orderID,customerID,employeeID,orderDate,shipperID) values (103,1661330043,3330,'2015-06-05',09);
+
+create table customers (
+	customerID int(255) primary key not null,
+	customerName varchar(255),
+	contactName varchar(255),
+	address varchar(255),
+	city varchar(255),
+	postalCode int(255),
+	country varchar(255)
+);
+
+// TABLE: CUSTOMERS //
+insert into customers (customerID,customerName,contactName,address,city,postalCode,country) values 
+(101,'shailendra','singh','mukhani','haldwani',263139,'india');
+insert into customers (customerID,customerName,contactName,address,city,postalCode,country) values (102,'moh','khabib','kakbanuslulaat','moscow',255912,'russia');
+insert into customers (customerID,customerName,contactName,address,city,postalCode,country) values 
+(103,'mukesh','pal','pilikhothi','ranibaag',263138,'india');
+
+@	QUERIES Alias	@
+|-------------------|
+
+Eg:- SELECT orders.orderID, customers.customerName, orders.orderDate FROM orders
+	INNER JOIN customers ON orders.customerID = customers.customerID;
+

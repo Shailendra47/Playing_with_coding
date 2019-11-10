@@ -1,0 +1,51 @@
+|---------------------------------------------------------------------------------------------|
+|	 SQL JOIN																				  |
+|	 --------																				  |		|	 -A JOIN clause is used to combine rows from two or more tables, based on a related column|
+|	 between them.																			  |		|---------------------------------------------------------------------------------------------|
+
+# DATABASES: JOINS(create database joins;) #
+
+create table orders (
+	orderID int(255) primary key not null,
+	customerID int(255),
+	orderDate date
+);
+
+//	 TABLE: ORDERS 	//
+insert into orders (orderID,customerID,orderDate) values (101,1661330077,'2015-04-01');
+insert into orders (orderID,customerID,orderDate) values (102,1661330078,'2014-08-24');
+insert into orders (orderID,customerID,orderDate) values (103,1661330043,'2015-06-05');
+
+create table customers (
+	customerID int(255) primary key not null,
+	customerName varchar(255),
+	contactName varchar(255),
+	country varchar(255)
+);
+
+// TABLE: CUSTOMERS //
+insert into customers (customerID,customerName,contactName,country) values (331,'shailendra singh','kai47','india');
+insert into customers (customerID,customerName,contactName,country) values (102,'yip man','fei wong','shanghai');
+insert into customers (customerID,customerName,contactName,country) values (701,'saitama nakamura','saitama','japan');
+insert into customers (customerID,customerName,contactName,country) values (101,'kai','usami','usami','india');
+
+@	QUERIES Alias	@
+|-------------------|
+
+Eg:- SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders
+	INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+
+|-----------------------------------------------------------------------------------------------|
+|	:Different Types of SQL joins 																|
+|	|----------------------------|														        |	|  																						        |
+|	=>Here are the different types of the JOINs in SQL:										    |	
+|																								|	|																								|
+|	-(INNER) JOIN: Returns records that have matching values in both tables						|	|																								|
+|	 LEFT (OUTER) JOIN:  																		|	|																								|
+|	-Returns all records from the left table, and the matched records from the right | table 	|	|																								|
+|	 RIGHT (OUTER) JOIN: 																		|	|																								|
+|	-Returns all records from the right table, and the matched records from the left   			|
+|     table           																			|
+|	-FULL (OUTER) JOIN: Returns all records when there is a match in either left or right 		|
+|     table 																					|
+|-----------------------------------------------------------------------------------------------|
