@@ -1,0 +1,42 @@
+Database:-	officeData (create database officeData;)
+
+//TABLE EMPLOYEE
+
+create table employ (
+	emp_id int(250) primary key not null,
+	emp_fname varchar(250),
+	emp_lname varchar(250),
+	city varchar(250),
+	state varchar(250),
+	address varchar(250),
+	dept varchar(250),
+	salary int(250),
+	report_to nvarchar(250),
+	dob date
+);
+
+insert into employ (emp_id,emp_fname,emp_lname,city,state,address,dept,salary,report_to,dob) 
+values (1,'shailendra','singh','haldwani','uttrakhand','pilikhothi','MCA',35000,'MCA101','1998-04-24');
+insert into employ (emp_id,emp_fname,emp_lname,city,state,address,dept,salary,report_to,dob) values
+(2,'harish','singh','haldwani','uttrakhand','area51','MCA',34000,'MCA201','1997-10-29');
+insert into employ (emp_id,emp_fname,emp_lname,city,state,address,dept,salary,report_to,dob) values(3,'ashish','negi','ramnagar','uttrakhand','MCA','pirum dara',35000,'MCA301','1999-02-09');
+insert into employ (emp_id,emp_fname,emp_lname,city,state,address,dept,salary,report_to,dob) values(4,'ritika','joshi','haldwani','uttrakhand','lamachur','B.tech',40000,'B.tech401','1999-12-06');
+insert into employ (emp_id,emp_fname,emp_lname,city,state,address,dept,salary,report_to,dob) values(5,'Mas','Oyama','tokyo','hara','eri wa','karate',57000,'kara421','1957-07-27');
+
+
+//TABLE IDENTITY
+create table identity (
+	dept_id int(250) primary key not null,
+	dept_name varchar(250)
+);
+
+insert into identity (dept_id,dept_name) values (101,'BBA');
+insert into identity (dept_id,dept_name) values (102,'BCA');
+insert into identity (dept_id,dept_name) values (103,'MBA');
+insert into identity (dept_id,dept_name) values (104,'MCA');
+insert into identity (dept_id,dept_name) values (105,'BHM');
+
+# Queries # 
+ 
+//To find the Age through DOB
+Eg:- select * emp_fname, emp_lname, (year(curdate())- year(dob)) as age;
